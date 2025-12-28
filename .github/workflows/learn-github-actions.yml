@@ -1,0 +1,23 @@
+name: Learn GitHub Actions
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  demo-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Print Hello
+        run: echo "Hello! GitHub Actions is working 🚀"
+
+      - name: Show current directory
+        run: pwd
+
+      - name: List files
+        run: ls -la
